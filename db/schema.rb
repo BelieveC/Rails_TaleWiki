@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160516185805) do
+ActiveRecord::Schema.define(version: 20160517010125) do
 
   create_table "genres", force: :cascade do |t|
     t.string   "name"
@@ -22,12 +22,12 @@ ActiveRecord::Schema.define(version: 20160516185805) do
 
   create_table "stories", force: :cascade do |t|
     t.string   "source"
-    t.string   "heading"
     t.string   "genre"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "genre_id"
+    t.string   "title"
   end
 
 end
